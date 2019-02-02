@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="PrismMemo.Views.Title"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Resource/job_programmer.png" />
+        </Grid.Background>
+        <TextBlock Text="プログラミング学習メモ" FontFamily="Meiryo" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#FFD70000"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+    </Grid>
+</UserControl>

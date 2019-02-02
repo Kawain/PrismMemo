@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Problems.Views.ProblemsMainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+
+        <StackPanel>
+
+            <TextBlock
+                Text="４択問題"
+                FontSize="48"
+                Margin="0,10"
+                FontWeight="Bold"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+
+            <TextBlock
+                TextWrapping="Wrap"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Margin="0,10">
+                プログラムの勉強用。知識やスキルアップのための問題集。<LineBreak />
+                このソフトはC#[WPF]の習作です。<LineBreak /><LineBreak />
+                下のリストボックスからカテゴリを複数選択できます。<LineBreak />
+                未選択の場合、全カテゴリから出題します。
+            </TextBlock>
+
+            <ListBox 
+                x:Name="ListBox"
+                Width="200"
+                Margin="0,10"
+                SelectionMode="Multiple"
+                DisplayMemberPath="Name"
+                ItemsSource="{Binding Items}">
+            </ListBox>
+
+            <Button
+                Command="{Binding StartCommand}"
+                CommandParameter="{Binding ElementName=ListBox, Path=SelectedItems}"
+                Content="スタート"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                FontSize="28"
+                Width="100"
+                Height="50"
+                Padding="5"/>
+
+            <Button 
+                Command="{Binding CreateCommand}"                
+                Content="問題作成"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                Padding="5"/>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

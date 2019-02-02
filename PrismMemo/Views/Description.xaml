@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="PrismMemo.Views.Description"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <StackPanel>
+
+        <TextBlock FontSize="24" Foreground="DarkBlue" Margin="10">このソフトについて</TextBlock>
+
+        <TextBlock Margin="10" Padding="10" TextWrapping="Wrap">
+            <Bold>C# WPF MVVM フレームワーク Prism</Bold> で作成した習作です。
+            とりあえずコードビハインドにコードは書かないを目標に作成しました。
+            しかし、例外として MainWindow のみはウィンドウの位置・サイズの保存のためにコードビハインドに書いています。<LineBreak/><LineBreak/>
+            <Bold>メモ</Bold>は、SQLiteのCRUD、Create（生成）、Read（読み取り）、Update（更新）、Delete（削除）の基本的な勉強のために作成しました。
+            書いている内容は、本当にメモで、ネットで見つけたコピペが主です。<LineBreak/><LineBreak/>
+            <Bold>問題</Bold>は、４択問題でプログラミングの知識を深められるようなコンテンツです。問題を登録するのが面倒で、なかなか問題数が増えません。
+        </TextBlock>
+
+    </StackPanel>
+</UserControl>
